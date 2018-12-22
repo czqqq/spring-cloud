@@ -1,12 +1,14 @@
-package com.czq.controller;
+package com.czq.model;
 
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity
-public class User {
+@Table(name = "user")
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -18,6 +20,7 @@ public class User {
     private Integer age;
     @Column
     private BigDecimal balance;
+
 
     public Long getId() {
         return id;

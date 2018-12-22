@@ -1,6 +1,6 @@
 package com.czq.dao;
 
-import com.czq.controller.User;
+import com.czq.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

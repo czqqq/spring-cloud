@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8000
 
 spring:
   jpa:
@@ -11,9 +11,20 @@ spring:
     platform: h2
     schema: classpath:schema.sql
     data: classpath:data.sql
+
+  #datasource:
+  #  username: root
+  #  password: chenzong.com
+  #  url: jdbc:mysql://47.107.79.61:3306/app?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+  #  driver-class-name: com.mysql.jdbc.Driver
+
 logging:
   level:
     root: info
     org.hibernate: info
     org.hibernate.type.descriptor.sql.BasicBinder: trace
     org.hibernate.type.descriptor.sql.BasicExtractor: trace
+
+management:
+  security:
+    enabled: false
